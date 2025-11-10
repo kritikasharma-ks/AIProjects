@@ -20,7 +20,7 @@ gemini_model = ChatGoogleGenerativeAI(model = "gemini-2.5-flash")
 tweet_chain = tweet_prompt | gemini_model
 
 
-st.header("Tweet Generator")
+st.header("Tweet Generator by Kritika Sharma")
 
 st.subheader("Generate tweets using Generative AI")
 
