@@ -14,7 +14,7 @@ if "messages" not in st.session_state:
         {"role": "assistant", "content": "How can I help you today?"}
     ]
 
-# Initialize ChatOpenAI with Together AI
+# Initialize LLM with Gemini
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     api_key=st.secrets["GOOGLE_API_KEY"],
