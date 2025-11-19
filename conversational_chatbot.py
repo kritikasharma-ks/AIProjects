@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.chat_history import BaseChatMessageHistory, InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -15,10 +15,9 @@ if "messages" not in st.session_state:
     ]
 
 # Initialize ChatOpenAI with Together AI
-llm = ChatOpenAI(
-    model="meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-    api_key=st.secrets["TOGETHER_API_KEY"],
-    base_url="https://api.together.xyz/v1",
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    api_key=st.secrets["GOOGLE_API_KEY"],
     temperature=0.7
 )
 
