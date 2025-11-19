@@ -45,7 +45,7 @@ conversation = RunnableWithMessageHistory(
 
 # Create user interface
 st.title("🗣️ Conversational Chatbot")
-st.subheader("Simple Chat Interface for LLMs by Build Fast with AI")
+st.subheader("Simple Chat Interface for LLMs by Kritika Sharma")
 
 # Display chat messages
 for message in st.session_state.messages:
